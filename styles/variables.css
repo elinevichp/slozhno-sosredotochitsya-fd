@@ -1,4 +1,15 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --bg-image: url('../images/cover-image-dark.png');
+  --bg-color: rgba(0, 0, 40, 1);
+  --decor-color: rgba(255, 0, 112, 1);
+  --accent-color: #ff0070;
+  --title-color: rgba(219, 0, 255, 1);
+  --main-color: rgba(255, 0, 112, 1);
+  --sections-description-color: rgba(0, 0, 40, 1);
+  --text-color: rgba(241, 178, 206, 1);
+  --button-color: rgba(255, 0, 112, 1);
+  --button-state-color: rgba(255, 0, 112, 0.4);
+  --link-color: rgba(255, 0, 112, 1);
+  --link-state-color: rgba(241, 178, 206, 1);
+  --REC-color: rgba(255, 0, 112, 1);
+}
