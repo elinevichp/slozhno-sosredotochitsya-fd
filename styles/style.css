@@ -122,6 +122,11 @@
   min-width: 355px;
   margin-inline: 10px;
 }
+.section {
+  display: grid;
+  margin-block-start: 0px;
+  gap: 0px;
+}
 .sections-main-title {
   color: var(--main-color);
 }
@@ -141,7 +146,7 @@
 .section-additional-title {
   font-family: "IBM Plex Mono", monospace;
   font-weight: normal;
-  size: 18px;
+  font-size: 18px;
   line-height: 23.4px;
   margin-block-start: 20px;
   color: var(--sections-description-color);
@@ -173,9 +178,6 @@
   outline: none;
   border: 1px solid var(--text-color);
 }
-.section:nth-of-type(4) {
-  margin-block-start: 50px;
-}
 .gallery {
   display: grid;
   margin-block-start: 10px;
@@ -183,6 +185,9 @@
   padding-left: 10px;
   padding-right: 10px;
   grid-template-columns: repeat(1, 1fr);
+}
+.section-gallery {
+  margin-block-start: 30px;
 }
 .gallery img {
   display: block;
@@ -208,6 +213,9 @@
   color: var(--title-color);
 }
 @media (min-width: 768px) {
+  .section {
+    margin-block-start: 60px;
+  }
   .header {
     min-height: 1024px;
     grid-template-columns: repeat(2, 1fr);
@@ -244,32 +252,31 @@
     margin-inline-end: 27px;
     margin-block-start: 192px;
   }
-  .section:first-of-type {
-    display: grid;
+  .section-why {
     grid-template-columns: 1fr 2fr;
     gap: 24px;
     align-items: start;
+    margin-block-start: 0px;
     padding-inline-end: 15px;
   }
-  .sections-main-title {
+  .section-why .sections-main-title {
     grid-column: 1;
     align-self: start;
     margin-block-start: 20px;
     margin-inline-start: 20px;
   }
-  .section:first-of-type .colorful-title {
+  .section-why .colorful-title {
     grid-column: 2;
     margin-block-start: 20px;
     padding: 0px 0px;
     align-self: start;
   }
-  .section-description {
+  .section-why .section-description {
     margin-block-start: 10px;
     grid-column: 2;
   }
-  .section:nth-of-type(2) {
+  .section-decrease {
     margin-block-start: 80px;
-    display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: min-content 1fr;
     padding: 0 20px;
@@ -279,39 +286,32 @@
     grid-column: span 2;
     display: block;
   }
-  .section:nth-of-type(2) .sections-title {
+  .section-decrease .sections-title {
     margin-block-start: 0px;
     margin-inline-start: 0px;
   }
-  .section:nth-of-type(2) .colorful-title {
+  .section-decrease .colorful-title {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
   }
-  .section:nth-of-type(2) .section-description {
+  .section-decrease .section-description {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
   }
-  .section:nth-of-type(3) {
-    display: grid;
+  .section-how {
     grid-template-columns: 1.1fr 2fr;
-    margin-block-start: 60px;
     padding-inline-end: 17px;
-    gap: 0px;
     margin-inline-start: 0px;
   }
-  .section:nth-of-type(3) .sections-title {
+  .section-how .sections-title {
     margin-block-start: 20px;
     margin-inline-start: 19px;
   }
-  .section-how-grid {
-    margin-inline-start: 0px;
-  }
-  .section:nth-of-type(3) .title-decor {
+  .section-how .title-decor {
     margin-inline-end: 0px;
   }
-  .section:nth-of-type(4) {
+  .section-gallery {
     padding: 0px 10px;
-    margin-block-start: 80px;
   }
   .gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -344,7 +344,6 @@
     margin-block-start: 60px;
   }
 }
-
 @media (min-width: 1024px) {
   .header {
     min-height: 768px;
@@ -354,7 +353,7 @@
     font-size: clamp(7.25rem, 7.25rem + 4vw, 9.8125rem);
   }
   .header__theme-menu {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
   }
   .header__theme-menu-list {
     flex-direction: row;
@@ -366,7 +365,7 @@
     margin-block-start: 114px;
     margin-inline-start: 513px;
   }
-  .section:first-of-type {
+  .section-why {
     gap: 11px;
     padding-inline-end: 10px;
   }
@@ -378,15 +377,15 @@
   .decrease-element {
     flex: 1;
   }
-  .section:nth-of-type(2) .colorful-title {
+  .section-decrease .colorful-title {
     min-width: 0;
   }
-  .section:nth-of-type(3) {
+  .section-how {
     grid-template-columns: 1fr 2fr;
     gap: 11px;
     padding-inline-end: 18px;
   }
-  .section:nth-of-type(3) .sections-title {
+  .section-how .sections-title {
     margin-inline-start: 19px;
   }
   .footer {
